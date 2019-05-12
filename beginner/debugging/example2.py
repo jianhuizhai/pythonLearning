@@ -1,3 +1,5 @@
+#! /usr/bin/python3
+
 import traceback
 try:
     raise Exception('This is the error message.')
