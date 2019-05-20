@@ -57,6 +57,12 @@ else:
 print('='*50)
 print('context managers -- the with command')
 print('='*50)
+
+## If anything goes wrong during the execution of process_file_data , the
+## file is closed properly and then the exception is raised.
+with open('data.txt', 'r') as f:
+    process_file_data(f)
+
 import numpy as np
 
 with np.errstate(invalid='ignore'):
