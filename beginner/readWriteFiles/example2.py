@@ -12,7 +12,9 @@ print(helloFile)
 sonnetFile = open('sonnet29.txt')
 print( sonnetFile.readlines() )
 sonnetFile.close()
-
+# with open('data.txt', 'r') as f:
+#     process_file_data(f)
+## above command will close the file automatically even there is a error during processs file data.
 baconFile = open('bacon.txt', 'w')   # w --- write
 print( baconFile.write('Hello world!\n') )
 baconFile.close()
