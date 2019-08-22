@@ -73,3 +73,11 @@ The `build_ext` option tells the script to build the extension modules indicated
 
 __For other two methods, please see Gabriele Lanaro, Python high performance, 2nd (2017).__
 
+#### Profiling Cython
+Cython provides a feature, called annotated view, that helps find which lines are executed in the Python interpreter and which are good candidates for ulterior optimizations. We can turn this feature on by compiling a Cython file with the -a option. In this way, Cython will generate an HTML file containing our code annotated with some useful information. The
+usage of the -a option is as follows:
+```
+cython -a cevolve.pyx
+firefox cevolve.html
+
+```
