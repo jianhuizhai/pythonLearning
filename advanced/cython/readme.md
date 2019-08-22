@@ -41,4 +41,12 @@ including the corresponding headers with the -I option, as follows:
 gcc -I/usr/include/python3.5 # ... other options
 gcc -I/usr/include/python2.7 # ... other options
 ```
+There is also some other methods to compile a Cython program.
+* writing a `setup.py` script;
+
+* using pyximport;
+
+* IPython use `cythonmagic` extention.
+
+#### One thing we should note that 
 * examples are taken from Python documentation or Python high performance (book).
