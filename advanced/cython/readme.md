@@ -29,5 +29,15 @@ This will produce a file called hello.so , a C extension module that is directly
 >>> hello.hello()
 Hello, World!
 ```
+Cython accepts both Python 2 and Python 3 as input and output languages. In other words, you can compile a Python 3 script hello.pyx file using the -3 option:
+```
+cython -3 hello.pyx
+```
 
+The generated hello.c can be compiled without any changes to Python 2 and Python 3 by
+including the corresponding headers with the -I option, as follows:
+```
+gcc -I/usr/include/python3.5 # ... other options
+gcc -I/usr/include/python2.7 # ... other options
+```
 * examples are taken from Python documentation or Python high performance (book).
