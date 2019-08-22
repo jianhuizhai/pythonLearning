@@ -71,7 +71,7 @@ python setup.py build_ext --inplace
 ```
 The `build_ext` option tells the script to build the extension modules indicated in `ext_modules` , while the `--inplace` option tells the script to place the `hello.so` output file in the same location as the source file (instead of a build directory).
 
-For other two methods, please see Gabriele Lanaro, Python high performance, 2nd (2017).
+__For other two methods, please see Gabriele Lanaro, Python high performance, 2nd (2017).__
 
 #### One thing we should note that 
 * examples are taken from Python documentation or Python high performance (book).
