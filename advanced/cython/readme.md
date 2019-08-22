@@ -73,5 +73,3 @@ The `build_ext` option tells the script to build the extension modules indicated
 
 __For other two methods, please see Gabriele Lanaro, Python high performance, 2nd (2017).__
 
-#### One thing we should note that 
-* examples are taken from Python documentation or Python high performance (book).
