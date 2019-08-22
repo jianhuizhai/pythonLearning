@@ -29,7 +29,7 @@ This will produce a file called hello.so , a C extension module that is directly
 >>> hello.hello()
 Hello, World!
 ```
--------
+*-------
 Cython accepts both Python 2 and Python 3 as input and output languages. In other words, you can compile a Python 3 script hello.pyx file using the -3 option:
 ```
 cython -3 hello.pyx
