@@ -22,4 +22,12 @@ example, the directory is /usr/include/python3.6m/ (you can find the directory b
 ```
 gcc -shared -pthread -fPIC -fwrapv -O2 -Wall -fno-strict-aliasing -lm -I/usr/include/python3.6m/ -o hello.so hello.c
 ```
+
+This will produce a file called hello.so , a C extension module that is directly importable into a Python session:
+```
+>>> import hello
+>>> hello.hello()
+Hello, World!
+```
+
 * examples are taken from Python documentation or Python high performance (book).
