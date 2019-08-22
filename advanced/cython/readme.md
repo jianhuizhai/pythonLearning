@@ -48,5 +48,8 @@ There is also some other methods to compile a Cython program.
 
 * IPython use `cythonmagic` extention.
 
+__Now, we will have a look at how to write a `setup.py` script.__
+By writing a setup.py script, we can compile the `.pyx` file directly to an extension module. To compile our `hello.pyx` example, we can write a minimal `setup.py` containing the following code:
+
 #### One thing we should note that 
 * examples are taken from Python documentation or Python high performance (book).
