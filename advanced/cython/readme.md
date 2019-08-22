@@ -50,6 +50,16 @@ There is also some other methods to compile a Cython program.
 
 __Now, we will have a look at how to write a `setup.py` script.__
 By writing a setup.py script, we can compile the `.pyx` file directly to an extension module. To compile our `hello.pyx` example, we can write a minimal `setup.py` containing the following code:
+```
+from distutils.core import setup
+from Cython.Build import cythonize
+
+setup(
+    name='Hello',
+    ext_modules = cythonize('hello.pyx')
+)
+```
+In the first two lines of the preceding code, we import the setup function and the cythonize helper. The setup function contains a few key-value pairs that specify the name of the application and the extensions that need to be built.
 
 #### One thing we should note that 
 * examples are taken from Python documentation or Python high performance (book).
