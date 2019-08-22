@@ -59,7 +59,19 @@ setup(
     ext_modules = cythonize('hello.pyx')
 )
 ```
-In the first two lines of the preceding code, we import the setup function and the cythonize helper. The setup function contains a few key-value pairs that specify the name of the application and the extensions that need to be built.
+In the first two lines of the preceding code, we import the `setup` function and the `cythonize` helper. The setup function contains a few key-value pairs that specify the name of the application and the extensions that need to be built.
+
+The cythonize helper takes either a string or a list of strings containing the Cython modules we want to compile. You can also use glob patterns using the following code:
+```
+cythonize(['hello.pyx', 'world.pyx', '*.pyx'])
+```
+To compile our extension module using `distutils` , you can execute the `setup.py` script using the following code:
+```
+python setup.py build_ext --inplace
+```
+The `build_ext` option tells the script to build the extension modules indicated in `ext_modules` , while the `--inplace` option tells the script to place the `hello.so` output file in the same location as the source file (instead of a build directory).
+
+For other two methods, please see Gabriele Lanaro, Python high performance, 2nd (2017).
 
 #### One thing we should note that 
 * examples are taken from Python documentation or Python high performance (book).
